@@ -3,7 +3,7 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene fog="type: linear; color: #333333; near: .1; far: 20">
       <a-assets id="Pumkin" src="images/pumpkintx.jpg" ></a-assets>
       <a-assets id="Bark" src="images/bark-1024-colcor.png"></a-assets>
       <a-assets id="Grass" src="images/Grass01.jpg"></a-assets>
@@ -41,8 +41,27 @@
       <a-cylinder src="#Bark" position="0 0 -4" radius=".5" color="#5c3b1c"></a-cylinder>
       </a-entity>
 
-    <a-plane src="#Grass" position="0 0 -4" rotation="-90 0 0" width="90" height="90" color="#147028"></a-plane>
-      <a-sky color="grey"></a-sky>
+      <a-entity position="12.06131 0 -9.91863">
+<a-cone position="0 2 -4" height="3" radius-bottom="1.2" color="#147029"></a-cone>
+      <a-cylinder src="#Bark" position="0 0 -4" radius=".5" color="#5c3b1c"></a-cylinder>
+      </a-entity>
+
+      <a-entity position="-6.60138 0 -7.11922">
+<a-cone position="0 2 -4" height="3" radius-bottom="1.2" color="#147029"></a-cone>
+      <a-cylinder src="#Bark" position="0 0 -4" radius=".5" color="#5c3b1c"></a-cylinder>
+      </a-entity>
+
+      <a-entity position="-13.53661 0 10.6857">
+<a-cone position="0 2 -4" height="3" radius-bottom="1.2" color="#147029"></a-cone>
+      <a-cylinder src="#Bark" position="0 0 -4" radius=".5" color="#5c3b1c"></a-cylinder>
+      </a-entity>
+
+      <a-entity position="3.33723 0.47518 -19.7626">
+        <a-box position="0 0 0"></a-box>
+      </a-entity>
+
+    <a-plane src="#Grass" position="0 0 -4" rotation="-90 0 0" width="90" height="90" color="#147028" material="shader: flat"></a-plane>
+      <a-sky color="#ffffff"></a-sky>
     </a-scene>
   </body>
 </html>
