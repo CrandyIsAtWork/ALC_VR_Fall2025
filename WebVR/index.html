@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene fo="type: linear; color: #333333; near: .1; far: 20">
@@ -58,12 +58,19 @@
       </a-entity>
 
       <a-entity position="3.33723 0.47518 -19.7626">
-        <a-box position="0 0 0"></a-box>
+        <a-box color="red" position="0 0 0">
+          <a-animation attribute="color" from="red" to="purple" begin="mouseenter"></a-animation>
+          <a-animation attribute="color" from="purple" to="red" begin="mouseexit"></a-animation>
+        </a-box>
       </a-entity>
-      <a-entity camera look-controls position="0 1.6 0">
+      <a-entity camera look-controls wasd-controls position="0 1.6 0">
         <a-cursor color="red">
         </a-cursor>
       </a-entity>
+
+<a-text color="black" value="G.R.M.O. TIME" position="0 2 -6" text="align:center;width:10" geometry="width:4.5;primitive:plane">
+  <a-animation attribute="position" from="0 2 -6" dur="50000" to="0 2 -798"></a-animation>
+</a-text>
 
     <a-plane src="#Grass" position="0 0 -4" rotation="-90 0 0" width="90" height="90" color="#147028" material="shader: flat"></a-plane>
       <a-sky src="#sky1"></a-sky>
